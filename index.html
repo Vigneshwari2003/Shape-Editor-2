@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shape Editor</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/konva/8.3.7/konva.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.0/openseadragon.min.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div id="toolbar">
+      <button onclick="addShape('circle')">Circle</button>
+      <button onclick="addShape('rectangle')">Rectangle</button>
+      <button onclick="addShape('square')">Square</button>
+      <button onclick="addShape('triangle')">Triangle</button>
+      <button onclick="removeAllShapes()">Cancel Shape</button>
+      <input type="file" id="file-input" accept="image/*" onchange="loadImage(event)" />
+    </div>
+    <div id="canvas-container"></div>
+    <div id="openseadragon-container" style="width: 800px; height: 600px; margin-top: 20px; z-index: 10;"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
